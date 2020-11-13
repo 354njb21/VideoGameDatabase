@@ -1,0 +1,10 @@
+CREATE TABLE Sales.Retailers
+(
+	RetailerId int NOT NULL identity(1,1),
+	PlatformId int NOT NULL,
+	RetailerName NVARCHAR(32) NOT NULL,
+	Quantity int NOT NULL,
+	Price double NOT NULL,
+	CreatedOn DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET()),
+    UpdatedOn DATETIMEOFFSET NOT NULL DEFAULT(SYSDATETIMEOFFSET())
+)

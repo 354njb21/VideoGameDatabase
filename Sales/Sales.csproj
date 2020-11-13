@@ -76,8 +76,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="SQL\" />
+    <Content Include="SQL\Tables\DropSalesTables.sql" />
+    <Content Include="SQL\Tables\Sales.Manufacturer.sql" />
+    <Content Include="SQL\Tables\Sales.Retailers.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

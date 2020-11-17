@@ -12,13 +12,10 @@ namespace GamingDatabase.Models
 
         public string Name { get; }
 
-        public DateTime FoundedDate {get;}
-
-        public Company(int companyId, string name, DateTime foundedDate)
+        public Company(int companyId, string name)
         {
             CompanyId = companyId;
             Name = name;
-            FoundedDate = foundedDate;
         }
     }
 }

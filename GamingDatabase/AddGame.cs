@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GamingDatabase
 {
-    public partial class Form1 : Form
+    public partial class AddGame : Form
     {
-        public Form1()
+        public AddGame()
         {
             InitializeComponent();
         }

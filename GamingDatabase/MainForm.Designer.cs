@@ -43,7 +43,7 @@
             // uxAddGameButton
             // 
             this.uxAddGameButton.Location = new System.Drawing.Point(16, 25);
-            this.uxAddGameButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxAddGameButton.Margin = new System.Windows.Forms.Padding(2);
             this.uxAddGameButton.Name = "uxAddGameButton";
             this.uxAddGameButton.Size = new System.Drawing.Size(93, 43);
             this.uxAddGameButton.TabIndex = 0;
@@ -54,7 +54,7 @@
             // uxLookupGameButton
             // 
             this.uxLookupGameButton.Location = new System.Drawing.Point(162, 25);
-            this.uxLookupGameButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxLookupGameButton.Margin = new System.Windows.Forms.Padding(2);
             this.uxLookupGameButton.Name = "uxLookupGameButton";
             this.uxLookupGameButton.Size = new System.Drawing.Size(93, 43);
             this.uxLookupGameButton.TabIndex = 1;
@@ -65,7 +65,7 @@
             // uxCompanyLookupButton
             // 
             this.uxCompanyLookupButton.Location = new System.Drawing.Point(297, 25);
-            this.uxCompanyLookupButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxCompanyLookupButton.Margin = new System.Windows.Forms.Padding(2);
             this.uxCompanyLookupButton.Name = "uxCompanyLookupButton";
             this.uxCompanyLookupButton.Size = new System.Drawing.Size(93, 43);
             this.uxCompanyLookupButton.TabIndex = 2;
@@ -76,7 +76,7 @@
             // uxUpdateGameButton
             // 
             this.uxUpdateGameButton.Location = new System.Drawing.Point(16, 94);
-            this.uxUpdateGameButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxUpdateGameButton.Margin = new System.Windows.Forms.Padding(2);
             this.uxUpdateGameButton.Name = "uxUpdateGameButton";
             this.uxUpdateGameButton.Size = new System.Drawing.Size(93, 43);
             this.uxUpdateGameButton.TabIndex = 3;
@@ -87,7 +87,7 @@
             // uxPlatformSalesButton
             // 
             this.uxPlatformSalesButton.Location = new System.Drawing.Point(162, 94);
-            this.uxPlatformSalesButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxPlatformSalesButton.Margin = new System.Windows.Forms.Padding(2);
             this.uxPlatformSalesButton.Name = "uxPlatformSalesButton";
             this.uxPlatformSalesButton.Size = new System.Drawing.Size(93, 43);
             this.uxPlatformSalesButton.TabIndex = 4;
@@ -98,7 +98,7 @@
             // uxGameSalesButton
             // 
             this.uxGameSalesButton.Location = new System.Drawing.Point(297, 94);
-            this.uxGameSalesButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uxGameSalesButton.Margin = new System.Windows.Forms.Padding(2);
             this.uxGameSalesButton.Name = "uxGameSalesButton";
             this.uxGameSalesButton.Size = new System.Drawing.Size(93, 43);
             this.uxGameSalesButton.TabIndex = 5;
@@ -150,7 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 332);
+            this.ClientSize = new System.Drawing.Size(405, 354);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -161,7 +161,7 @@
             this.Controls.Add(this.uxCompanyLookupButton);
             this.Controls.Add(this.uxLookupGameButton);
             this.Controls.Add(this.uxAddGameButton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GamingDatabase";
             this.Text = "Gaming Database";
             this.ResumeLayout(false);

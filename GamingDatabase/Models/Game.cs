@@ -16,6 +16,8 @@ namespace GamingDatabase.Models
 
         public string Name { get; }
 
+        public string Genre { get; }
+
         public double Price { get; }
 
         public DateTime ReleaseDate { get; }
@@ -23,12 +25,13 @@ namespace GamingDatabase.Models
         public char Rating { get; }
 
 
-        public Game(int gameId, int companyId, int platformId, string name, double price, DateTime releaseDate, char rating)
+        public Game(int gameId, int companyId, int platformId, string name, string genre, double price, DateTime releaseDate, char rating)
         {
             GameId = gameId;
             CompanyId = companyId;
             PlatformId = platformId;
             Name = name;
+            Genre = genre;
             Price = price;
             ReleaseDate = releaseDate;
             Rating = rating;

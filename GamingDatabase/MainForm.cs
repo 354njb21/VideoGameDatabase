@@ -32,7 +32,7 @@ namespace GamingDatabase
 
         private void uxUpdateGameButton_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void uxLookupGameButton_Click(object sender, EventArgs e)

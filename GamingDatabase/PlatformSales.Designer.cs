@@ -36,6 +36,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.uxFilterPlatformSales = new System.Windows.Forms.Button();
+            this.uxMinDollarAmount = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.uxMaxDollarAmount = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,7 +102,7 @@
             // uxFilterPlatformSales
             // 
             this.uxFilterPlatformSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxFilterPlatformSales.Location = new System.Drawing.Point(247, 103);
+            this.uxFilterPlatformSales.Location = new System.Drawing.Point(245, 112);
             this.uxFilterPlatformSales.Name = "uxFilterPlatformSales";
             this.uxFilterPlatformSales.Size = new System.Drawing.Size(171, 26);
             this.uxFilterPlatformSales.TabIndex = 3;
@@ -106,14 +110,50 @@
             this.uxFilterPlatformSales.UseVisualStyleBackColor = true;
             this.uxFilterPlatformSales.Click += new System.EventHandler(this.uxFilterPlatformSales_Click);
             // 
+            // uxMinDollarAmount
+            // 
+            this.uxMinDollarAmount.Location = new System.Drawing.Point(128, 75);
+            this.uxMinDollarAmount.Name = "uxMinDollarAmount";
+            this.uxMinDollarAmount.Size = new System.Drawing.Size(144, 20);
+            this.uxMinDollarAmount.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(29, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Min Dollar Amount";
+            // 
+            // uxMaxDollarAmount
+            // 
+            this.uxMaxDollarAmount.Location = new System.Drawing.Point(493, 75);
+            this.uxMaxDollarAmount.Name = "uxMaxDollarAmount";
+            this.uxMaxDollarAmount.Size = new System.Drawing.Size(144, 20);
+            this.uxMaxDollarAmount.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(391, 78);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Max Dollar Amount";
+            // 
             // PlatformSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(694, 450);
+            this.Controls.Add(this.uxMaxDollarAmount);
+            this.Controls.Add(this.uxMinDollarAmount);
             this.Controls.Add(this.uxFilterPlatformSales);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -137,5 +177,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button uxFilterPlatformSales;
+        private System.Windows.Forms.TextBox uxMinDollarAmount;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox uxMaxDollarAmount;
+        private System.Windows.Forms.Label label5;
     }
 }

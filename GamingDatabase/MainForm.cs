@@ -32,7 +32,8 @@ namespace GamingDatabase
 
         private void uxUpdateGameButton_Click(object sender, EventArgs e)
         {
-            
+            UpdateGame updateGame = new UpdateGame();
+            updateGame.Show();
         }
 
         private void uxLookupGameButton_Click(object sender, EventArgs e)

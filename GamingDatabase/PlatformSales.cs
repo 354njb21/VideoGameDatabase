@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace GamingDatabase
 {
-    public partial class AddGame : Form
+    public partial class PlatformSales : Form
     {
-        public AddGame()
+        public PlatformSales()
         {
             InitializeComponent();
         }
 
-        private void uxAddButton_Click(object sender, EventArgs e)
+        private void uxFilterPlatformSales_Click(object sender, EventArgs e)
         {
 
         }

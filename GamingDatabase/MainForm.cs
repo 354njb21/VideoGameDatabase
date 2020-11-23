@@ -29,5 +29,27 @@ namespace GamingDatabase
             AddGame addGame = new AddGame();
             addGame.Show();
         }
+
+        private void uxUpdateGameButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uxLookupGameButton_Click(object sender, EventArgs e)
+        {
+            GameLookup gameLookup = new GameLookup();
+            gameLookup.Show();
+        }
+
+        private void uxGameSalesButton_Click(object sender, EventArgs e)
+        {
+            GameSales gameSales = new GameSales();
+            gameSales.Show();
+        }
+
+        private void uxPlatformSalesButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

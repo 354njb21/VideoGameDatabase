@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace GamingDatabase
 {
-    public partial class AddGame : Form
+    public partial class UpdateGame : Form
     {
-        public AddGame()
+        public UpdateGame()
         {
             InitializeComponent();
-        }
-
-        private void uxAddButton_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

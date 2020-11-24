@@ -12,9 +12,25 @@ namespace GamingDatabase
 {
     public partial class UpdateGame : Form
     {
+        private string gameTitle;
+
         public UpdateGame()
         {
             InitializeComponent();
+        }
+
+        public UpdateGame(string gameTitle)
+        {
+            InitializeComponent();
+            this.gameTitle = gameTitle;
+
+            uxGameName.Text = gameTitle;
+        }
+
+        private void uxUpdateGameButton_Click(object sender, EventArgs e)
+        {
+            UpdateGame updateGame = new UpdateGame();
+            updateGame.Close();
         }
     }
 }

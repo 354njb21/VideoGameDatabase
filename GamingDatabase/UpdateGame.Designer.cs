@@ -40,7 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.uxUpdateGame = new System.Windows.Forms.Button();
+            this.uxUpdateGameButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // uxGameName
@@ -155,21 +155,22 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "Review Score (0-100)";
             // 
-            // uxUpdateGame
+            // uxUpdateGameButton
             // 
-            this.uxUpdateGame.Location = new System.Drawing.Point(185, 317);
-            this.uxUpdateGame.Name = "uxUpdateGame";
-            this.uxUpdateGame.Size = new System.Drawing.Size(126, 23);
-            this.uxUpdateGame.TabIndex = 4;
-            this.uxUpdateGame.Text = "Update Game";
-            this.uxUpdateGame.UseVisualStyleBackColor = true;
+            this.uxUpdateGameButton.Location = new System.Drawing.Point(185, 317);
+            this.uxUpdateGameButton.Name = "uxUpdateGameButton";
+            this.uxUpdateGameButton.Size = new System.Drawing.Size(126, 23);
+            this.uxUpdateGameButton.TabIndex = 4;
+            this.uxUpdateGameButton.Text = "Update Game";
+            this.uxUpdateGameButton.UseVisualStyleBackColor = true;
+            this.uxUpdateGameButton.Click += new System.EventHandler(this.uxUpdateGameButton_Click);
             // 
             // UpdateGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(420, 352);
-            this.Controls.Add(this.uxUpdateGame);
+            this.Controls.Add(this.uxUpdateGameButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -203,6 +204,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button uxUpdateGame;
+        private System.Windows.Forms.Button uxUpdateGameButton;
     }
 }

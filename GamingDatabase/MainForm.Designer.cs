@@ -38,6 +38,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.uxStreamersButton = new System.Windows.Forms.Button();
+            this.uxRetailSalesButton = new System.Windows.Forms.Button();
+            this.uxReportQueriesButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // uxAddGameButton
@@ -109,7 +112,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 186);
+            this.label1.Location = new System.Drawing.Point(16, 253);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
@@ -119,7 +122,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 310);
+            this.label2.Location = new System.Drawing.Point(16, 332);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 13);
@@ -129,7 +132,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 271);
+            this.label3.Location = new System.Drawing.Point(16, 303);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 13);
@@ -139,12 +142,45 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 232);
+            this.label4.Location = new System.Drawing.Point(16, 280);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Report Query";
+            // 
+            // uxStreamersButton
+            // 
+            this.uxStreamersButton.Location = new System.Drawing.Point(16, 167);
+            this.uxStreamersButton.Margin = new System.Windows.Forms.Padding(2);
+            this.uxStreamersButton.Name = "uxStreamersButton";
+            this.uxStreamersButton.Size = new System.Drawing.Size(93, 43);
+            this.uxStreamersButton.TabIndex = 3;
+            this.uxStreamersButton.Text = "Streamers";
+            this.uxStreamersButton.UseVisualStyleBackColor = true;
+            this.uxStreamersButton.Click += new System.EventHandler(this.uxStreamersButton_Click);
+            // 
+            // uxRetailSalesButton
+            // 
+            this.uxRetailSalesButton.Location = new System.Drawing.Point(162, 167);
+            this.uxRetailSalesButton.Margin = new System.Windows.Forms.Padding(2);
+            this.uxRetailSalesButton.Name = "uxRetailSalesButton";
+            this.uxRetailSalesButton.Size = new System.Drawing.Size(93, 43);
+            this.uxRetailSalesButton.TabIndex = 3;
+            this.uxRetailSalesButton.Text = "Retail Sales";
+            this.uxRetailSalesButton.UseVisualStyleBackColor = true;
+            this.uxRetailSalesButton.Click += new System.EventHandler(this.uxRetailSalesButton_Click);
+            // 
+            // uxReportQueriesButton
+            // 
+            this.uxReportQueriesButton.Location = new System.Drawing.Point(297, 167);
+            this.uxReportQueriesButton.Margin = new System.Windows.Forms.Padding(2);
+            this.uxReportQueriesButton.Name = "uxReportQueriesButton";
+            this.uxReportQueriesButton.Size = new System.Drawing.Size(93, 43);
+            this.uxReportQueriesButton.TabIndex = 3;
+            this.uxReportQueriesButton.Text = "Report Queries";
+            this.uxReportQueriesButton.UseVisualStyleBackColor = true;
+            this.uxReportQueriesButton.Click += new System.EventHandler(this.uxReportQueriesButton_Click);
             // 
             // GamingDatabase
             // 
@@ -157,6 +193,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.uxGameSalesButton);
             this.Controls.Add(this.uxPlatformSalesButton);
+            this.Controls.Add(this.uxReportQueriesButton);
+            this.Controls.Add(this.uxRetailSalesButton);
+            this.Controls.Add(this.uxStreamersButton);
             this.Controls.Add(this.uxUpdateGameButton);
             this.Controls.Add(this.uxCompanyLookupButton);
             this.Controls.Add(this.uxLookupGameButton);
@@ -181,6 +220,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button uxStreamersButton;
+        private System.Windows.Forms.Button uxRetailSalesButton;
+        private System.Windows.Forms.Button uxReportQueriesButton;
     }
 }
 

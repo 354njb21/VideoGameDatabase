@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GamingDatabase
+namespace Players
 {
-    public partial class AddGame : Form
+    public partial class RetailSales : Form
     {
-        public AddGame()
+        public RetailSales()
         {
             InitializeComponent();
-        }
-
-        private void uxAddButton_Click(object sender, EventArgs e)
-        {
-            AddGame addGame = new AddGame();
-            addGame.Close();
         }
     }
 }

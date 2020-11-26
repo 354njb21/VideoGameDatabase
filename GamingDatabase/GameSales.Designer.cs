@@ -29,59 +29,91 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.uxGameName = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.uxLookupButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.uxStartYear = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.uxEndYear = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.uxGameSalesDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.uxGameSalesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 34);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(225, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 17);
+            this.label1.Size = new System.Drawing.Size(206, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Game Name";
+            this.label1.Text = "Filter The Game Sales Data";
             // 
-            // uxGameName
+            // uxStartYear
             // 
-            this.uxGameName.Location = new System.Drawing.Point(107, 28);
-            this.uxGameName.Name = "uxGameName";
-            this.uxGameName.Size = new System.Drawing.Size(243, 22);
-            this.uxGameName.TabIndex = 1;
+            this.uxStartYear.Location = new System.Drawing.Point(103, 62);
+            this.uxStartYear.Name = "uxStartYear";
+            this.uxStartYear.Size = new System.Drawing.Size(195, 20);
+            this.uxStartYear.TabIndex = 1;
             // 
-            // dataGridView1
+            // label2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 85);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(441, 268);
-            this.dataGridView1.TabIndex = 2;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(34, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Start Year";
             // 
-            // uxLookupButton
+            // uxEndYear
             // 
-            this.uxLookupButton.Location = new System.Drawing.Point(380, 24);
-            this.uxLookupButton.Name = "uxLookupButton";
-            this.uxLookupButton.Size = new System.Drawing.Size(101, 30);
-            this.uxLookupButton.TabIndex = 3;
-            this.uxLookupButton.Text = "Lookup Sales";
-            this.uxLookupButton.UseVisualStyleBackColor = true;
+            this.uxEndYear.Location = new System.Drawing.Point(103, 109);
+            this.uxEndYear.Name = "uxEndYear";
+            this.uxEndYear.Size = new System.Drawing.Size(195, 20);
+            this.uxEndYear.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(34, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "End Year";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(236, 197);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(195, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Filter";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.uxFilterBtn_Click);
+            // 
+            // uxGameSalesDataGridView
+            // 
+            this.uxGameSalesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uxGameSalesDataGridView.Location = new System.Drawing.Point(12, 258);
+            this.uxGameSalesDataGridView.Name = "uxGameSalesDataGridView";
+            this.uxGameSalesDataGridView.Size = new System.Drawing.Size(665, 272);
+            this.uxGameSalesDataGridView.TabIndex = 6;
             // 
             // GameSales
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 378);
-            this.Controls.Add(this.uxLookupButton);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.uxGameName);
+            this.ClientSize = new System.Drawing.Size(689, 542);
+            this.Controls.Add(this.uxGameSalesDataGridView);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.uxEndYear);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.uxStartYear);
             this.Controls.Add(this.label1);
             this.Name = "GameSales";
-            this.Text = "Game Sales";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "GameSales";
+            ((System.ComponentModel.ISupportInitialize)(this.uxGameSalesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,8 +122,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox uxGameName;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button uxLookupButton;
+        private System.Windows.Forms.TextBox uxStartYear;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox uxEndYear;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView uxGameSalesDataGridView;
     }
 }

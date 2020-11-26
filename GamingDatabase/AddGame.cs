@@ -16,5 +16,11 @@ namespace GamingDatabase
         {
             InitializeComponent();
         }
+
+        private void uxAddButton_Click(object sender, EventArgs e)
+        {
+            AddGame addGame = new AddGame();
+            addGame.Close();
+        }
     }
 }

@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,29 +53,17 @@
     <Compile Include="AddGame.Designer.cs">
       <DependentUpon>AddGame.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameLookup.Designer.cs">
+      <DependentUpon>GameLookup.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameSales.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GameSales.Designer.cs">
       <DependentUpon>GameSales.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LookupGame.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LookupGame.Designer.cs">
-      <DependentUpon>LookupGame.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PlatformSales.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PlatformSales.Designer.cs">
-      <DependentUpon>PlatformSales.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UpdateGame.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateGame.Designer.cs">
-      <DependentUpon>UpdateGame.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -91,19 +80,43 @@
     <Compile Include="Models\Company.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\Platform.cs" />
+    <Compile Include="PlatformSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlatformSales.Designer.cs">
+      <DependentUpon>PlatformSales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportQueries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportQueries.Designer.cs">
+      <DependentUpon>ReportQueries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateGame.Designer.cs">
+      <DependentUpon>UpdateGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateGamePopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateGamePopUp.Designer.cs">
+      <DependentUpon>UpdateGamePopUp.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddGame.resx">
       <DependentUpon>AddGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CompanyLookup.resx">
       <DependentUpon>CompanyLookup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GameLookup.resx">
+      <DependentUpon>GameLookup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GameSales.resx">
       <DependentUpon>GameSales.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LookupGame.resx">
-      <DependentUpon>LookupGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -122,6 +135,9 @@
     </Compile>
     <EmbeddedResource Include="UpdateGame.resx">
       <DependentUpon>UpdateGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateGamePopUp.resx">
+      <DependentUpon>UpdateGamePopUp.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -144,6 +160,16 @@
     <Content Include="SQL\Tables\Gaming.Company.sql" />
     <Content Include="SQL\Tables\Gaming.Game.sql" />
     <Content Include="SQL\Tables\Gaming.Platforms.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Players\Players.csproj">
+      <Project>{a1e248f0-6ee2-4162-9887-0a861603619c}</Project>
+      <Name>Players</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sales\Sales.csproj">
+      <Project>{ecb8c81b-a8f7-42b7-afe4-3b791058a6bc}</Project>
+      <Name>Sales</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

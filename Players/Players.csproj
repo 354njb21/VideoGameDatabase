@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="RetailSales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="RetailSales.Designer.cs">
+      <DependentUpon>RetailSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Streamers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Streamers.Designer.cs">
+      <DependentUpon>Streamers.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Generation.cs" />
     <Compile Include="Models\Streamers.cs" />
@@ -65,6 +71,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RetailSales.resx">
+      <DependentUpon>RetailSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Streamers.resx">
+      <DependentUpon>Streamers.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,7 +90,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="SQL\Tables\DropPlayersTables.sql" />
     <Content Include="SQL\Tables\Players.Generation.sql" />

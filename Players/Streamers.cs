@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Players
 {
-    public partial class Form1 : Form
+    public partial class Streamers : Form
     {
-        public Form1()
+        public Streamers()
         {
             InitializeComponent();
         }

@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GamingDatabase
+namespace Players
 {
-    public partial class PlatformSales : Form
+    public partial class RetailSales : Form
     {
-        public PlatformSales()
+        public RetailSales()
         {
             InitializeComponent();
-        }
-
-        private void uxFilterPlatformSales_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

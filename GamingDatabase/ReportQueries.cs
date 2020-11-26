@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace GamingDatabase
 {
-    public partial class PlatformSales : Form
+    public partial class ReportQueries : Form
     {
-        public PlatformSales()
+        public ReportQueries()
         {
             InitializeComponent();
-        }
-
-        private void uxFilterPlatformSales_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

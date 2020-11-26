@@ -31,6 +31,7 @@
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.uxCompanyName = new System.Windows.Forms.TextBox();
             this.uxFindCompanyBtn = new System.Windows.Forms.Button();
+            this.uxFindAll = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,16 +62,27 @@
             this.uxFindCompanyBtn.UseVisualStyleBackColor = true;
             this.uxFindCompanyBtn.Click += new System.EventHandler(this.uxFindCompanyBtn_Click);
             // 
+            // uxFindAll
+            // 
+            this.uxFindAll.Location = new System.Drawing.Point(650, 26);
+            this.uxFindAll.Name = "uxFindAll";
+            this.uxFindAll.Size = new System.Drawing.Size(138, 32);
+            this.uxFindAll.TabIndex = 3;
+            this.uxFindAll.Text = "Find All Companies";
+            this.uxFindAll.UseVisualStyleBackColor = true;
+            this.uxFindAll.Click += new System.EventHandler(this.uxFindAll_Click);
+            // 
             // CompanyLookup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.uxFindAll);
             this.Controls.Add(this.uxFindCompanyBtn);
             this.Controls.Add(this.uxCompanyName);
             this.Controls.Add(this.dataGridView);
             this.Name = "CompanyLookup";
-            this.Text = "Form2";
+            this.Text = "Lookup Company";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -82,5 +94,6 @@
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.TextBox uxCompanyName;
         private System.Windows.Forms.Button uxFindCompanyBtn;
+        private System.Windows.Forms.Button uxFindAll;
     }
 }

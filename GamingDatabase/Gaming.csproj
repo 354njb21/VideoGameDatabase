@@ -52,6 +52,30 @@
     <Compile Include="AddGame.Designer.cs">
       <DependentUpon>AddGame.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameSales.Designer.cs">
+      <DependentUpon>GameSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LookupGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LookupGame.Designer.cs">
+      <DependentUpon>LookupGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlatformSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlatformSales.Designer.cs">
+      <DependentUpon>PlatformSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateGame.Designer.cs">
+      <DependentUpon>UpdateGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,8 +99,17 @@
     <EmbeddedResource Include="CompanyLookup.resx">
       <DependentUpon>CompanyLookup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GameSales.resx">
+      <DependentUpon>GameSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookupGame.resx">
+      <DependentUpon>LookupGame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlatformSales.resx">
+      <DependentUpon>PlatformSales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -87,6 +120,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UpdateGame.resx">
+      <DependentUpon>UpdateGame.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -14,7 +14,7 @@ namespace GamingDatabase
     public partial class CompanyLookup : Form
     {
         // Use your user and pass
-        private SqlConnection connection = new SqlConnection("Data Source=mssql.cs.ksu.edu;Initial Catalog = connorg15; User ID = username; Password=Password");
+        private SqlConnection connection = new SqlConnection("Data Source=mssql.cs.ksu.edu;Initial Catalog = connorg15; User ID = connorg15; Password=");
         private SqlDataAdapter adapter;
         private DataTable dt;
 
@@ -39,6 +39,16 @@ namespace GamingDatabase
             dt = new DataTable();
             adapter.Fill(dt);
             dataGridView.DataSource = dt;
+        }
+
+        private void uxFindAll_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            adapter = new SqlDataAdapter("Select * From Gaming.Company", connection);
+            dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView.DataSource = dt;
+            connection.Close();
         }
     }
 }

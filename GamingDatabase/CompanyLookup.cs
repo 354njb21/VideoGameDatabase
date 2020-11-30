@@ -14,28 +14,37 @@ namespace GamingDatabase
     public partial class CompanyLookup : Form
     {
         // Use your user and pass
-        private SqlConnection connection = new SqlConnection("Data Source=mssql.cs.ksu.edu;Initial Catalog = connorg15; User ID = connorg15; Password=b00mers00ner");
+        private SqlConnection connection;
         private SqlDataAdapter adapter;
         private DataTable dt;
+        private string user;
+        private string pass;
 
-        public CompanyLookup()
+        public CompanyLookup(string u, string p)
         {
             InitializeComponent();
+            user = u;
+            pass = p;
+            connection = new SqlConnection("Data Source=mssql.cs.ksu.edu;Initial Catalog = connorg15; User ID = " + user + "; Password=" + pass);
         }
 
         private void uxFindCompanyBtn_Click(object sender, EventArgs e)
         {
             string name = uxCompanyName.Text;
             connection.Open();
-            if (name.Equals("")) MessageBox.Show("Please enter in a Company Name");
+            if (name.Equals(""))
+            {
+                MessageBox.Show("Please enter in a Company Name");
+                connection.Close();
+                return;
+            }
             connection.Close();
             ShowData(name);
-            
         }
 
         public void ShowData(string name)
         {
-            adapter = new SqlDataAdapter("Select CompanyID, Name From Gaming.Company Where Name= '" + name + "'", connection);
+            adapter = new SqlDataAdapter("Select CompanyID, Name From Gaming.Company Where Name like '%" + name + "%'", connection);
             dt = new DataTable();
             adapter.Fill(dt);
             dataGridView.DataSource = dt;

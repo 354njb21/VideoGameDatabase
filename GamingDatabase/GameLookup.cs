@@ -13,13 +13,18 @@ namespace GamingDatabase
 {
     public partial class GameLookup : Form
     {
-        private SqlConnection connection = new SqlConnection("Data Source=mssql.cs.ksu.edu;Initial Catalog = connorg15; User ID = connorg15; Password=b00mers00ner");
+        private SqlConnection connection;
         private SqlDataAdapter adapter;
         private DataTable dt;
+        private string user;
+        private string pass;
 
-        public GameLookup()
+        public GameLookup(string u, string p)
         {
             InitializeComponent();
+            user = u;
+            pass = p;
+            connection = new SqlConnection("Data Source=mssql.cs.ksu.edu;Initial Catalog = connorg15; User ID = " + user + "; Password=" + pass);
         }
 
         private void uxFindGame_Click(object sender, EventArgs e)
@@ -27,7 +32,7 @@ namespace GamingDatabase
             string game = uxGameTitle.Text;
             connection.Open();
             if (game.Equals("")) MessageBox.Show("Please enter in a Game Title");
-            adapter = new SqlDataAdapter("Select GameID, Name From Gaming.Game Where Name = '" + game + "'", connection);
+            adapter = new SqlDataAdapter("Select * From Gaming.Game Where Name = '" + game + "'", connection);
             dt = new DataTable();
             adapter.Fill(dt);
             uxGameDataGridView.DataSource = dt;
@@ -49,7 +54,7 @@ namespace GamingDatabase
             string year = uxYearReleased.Text;
             connection.Open();
             if (year.Equals("")) MessageBox.Show("Please enter a valid year.");
-            adapter = new SqlDataAdapter("Select GameID, Name, YearReleased From Gaming.Game Where YearReleased='" + year + "'", connection);
+            adapter = new SqlDataAdapter("Select * From Gaming.Game Where YearReleased='" + year + "'", connection);
             dt = new DataTable();
             adapter.Fill(dt);
             uxGameDataGridView.DataSource = dt;
@@ -61,7 +66,7 @@ namespace GamingDatabase
             string genre = uxGenre.Text;
             connection.Open();
             if (genre.Equals("")) MessageBox.Show("Please enter a valid genre");
-            adapter = new SqlDataAdapter("Select GameID, Name, Genre From Gaming.Game Where Genre='" + genre + "'", connection);
+            adapter = new SqlDataAdapter("Select * From Gaming.Game Where Genre='" + genre + "'", connection);
             dt = new DataTable();
             adapter.Fill(dt);
             uxGameDataGridView.DataSource = dt;
@@ -73,7 +78,7 @@ namespace GamingDatabase
             string rating = uxRating.Text;
             connection.Open();
             if (rating.Equals("")) MessageBox.Show("Please enter a valid genre");
-            adapter = new SqlDataAdapter("Select GameID, Name, Rating From Gaming.Game Where Rating='" + rating + "'", connection);
+            adapter = new SqlDataAdapter("Select * From Gaming.Game Where Rating='" + rating + "'", connection);
             dt = new DataTable();
             adapter.Fill(dt);
             uxGameDataGridView.DataSource = dt;

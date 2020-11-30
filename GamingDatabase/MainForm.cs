@@ -10,52 +10,56 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Windows.Navigation;
 using Players;
+
 namespace GamingDatabase
 {
     public partial class GamingDatabase : Form
     {
-        //Access to SQL
+        private string username;
+        private string password;
         public GamingDatabase()
         {
             InitializeComponent();
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
+            username = loginForm.GetUser();
+            password = loginForm.GetPassword();
         }
 
         private void uxCompanyLookupButton_Click(object sender, EventArgs e)
         {
-            CompanyLookup companyLookup = new CompanyLookup();
+            CompanyLookup companyLookup = new CompanyLookup(username, password);
             companyLookup.Show();
         }
 
         private void uxAddGameButton_Click(object sender, EventArgs e)
         {
-            AddGame addGame = new AddGame();
+            AddGame addGame = new AddGame(username, password);
             addGame.Show();
         }
 
         private void uxUpdateGameButton_Click(object sender, EventArgs e)
         {
-            UpdateGamePopUp gamePopUp = new UpdateGamePopUp();
+            UpdateGame gamePopUp = new UpdateGame(username, password);
             gamePopUp.Show();
         }
 
         private void uxLookupGameButton_Click(object sender, EventArgs e)
         {
-            GameLookup gameLookup = new GameLookup();
+            GameLookup gameLookup = new GameLookup(username, password);
             gameLookup.Show();
         }
 
         private void uxGameSalesButton_Click(object sender, EventArgs e)
         {
-            GameSales gameSales = new GameSales();
+            GameSales gameSales = new GameSales(username, password);
             gameSales.Show();
         }
 
         private void uxPlatformSalesButton_Click(object sender, EventArgs e)
         {
-            PlatformSales platformSales = new PlatformSales();
+            PlatformSales platformSales = new PlatformSales(username, password);
             platformSales.Show();
-
-            
         }
 
         private void uxStreamersButton_Click(object sender, EventArgs e)
@@ -72,8 +76,8 @@ namespace GamingDatabase
 
         private void uxReportQueriesButton_Click(object sender, EventArgs e)
         {
-            ReportQueries reportQueries = new ReportQueries();
-            reportQueries.Show();
+            //ReportQueries reportQueries = new ReportQueries(username, password);
+            //reportQueries.Show();
         }
     }
 }

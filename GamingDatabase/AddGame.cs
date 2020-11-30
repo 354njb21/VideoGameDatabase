@@ -12,12 +12,16 @@ namespace GamingDatabase
 {
     public partial class AddGame : Form
     {
-        private SqlConnection connection = new SqlConnection("Data Source=mssql.cs.ksu.edu;Initial Catalog = connorg15; User ID = connorg15; Password=b00mers00ner");
+        private SqlConnection connection;
+        private string user;
+        private string pass;
 
-
-        public AddGame()
+        public AddGame(string u, string p)
         {
             InitializeComponent();
+            user = u;
+            pass = p;
+            connection = new SqlConnection("Data Source=mssql.cs.ksu.edu;Initial Catalog = connorg15; User ID = " + user + "; Password=" + pass);
         }
 
         private void uxAddButton_Click(object sender, EventArgs e)

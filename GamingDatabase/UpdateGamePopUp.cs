@@ -23,14 +23,7 @@ namespace GamingDatabase
             
             UpdateGamePopUp gamePopUp = new UpdateGamePopUp();
             gamePopUp.Close();
-
-            UpdateGame updateGame = new UpdateGame(title);
-            updateGame.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

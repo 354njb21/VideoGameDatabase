@@ -49,7 +49,6 @@
             this.label1.Size = new System.Drawing.Size(271, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Enter a Game Title To Update";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // uxSubmitButton
             // 

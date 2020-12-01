@@ -90,10 +90,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="SQL\Tables\DropPlayersTables.sql" />
-    <Content Include="SQL\Tables\Players.Generation.sql" />
-    <Content Include="SQL\Tables\Players.Streamers.sql" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

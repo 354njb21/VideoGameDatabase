@@ -1,3 +1,0 @@
-DROP TABLE IF EXISTS Gaming.Game;
-DROP TABLE IF EXISTS Gaming.Company;
-DROP TABLE IF EXISTS Gaming.Platforms;

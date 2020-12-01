@@ -35,7 +35,7 @@
             this.uxPlatformSalesButton = new System.Windows.Forms.Button();
             this.uxGameSalesButton = new System.Windows.Forms.Button();
             this.uxStreamersButton = new System.Windows.Forms.Button();
-            this.uxRetailSalesButton = new System.Windows.Forms.Button();
+            this.uxDeleteGameButton = new System.Windows.Forms.Button();
             this.uxReportQueriesButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -63,7 +63,7 @@
             // 
             // uxCompanyLookupButton
             // 
-            this.uxCompanyLookupButton.Location = new System.Drawing.Point(216, 31);
+            this.uxCompanyLookupButton.Location = new System.Drawing.Point(396, 31);
             this.uxCompanyLookupButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uxCompanyLookupButton.Name = "uxCompanyLookupButton";
             this.uxCompanyLookupButton.Size = new System.Drawing.Size(124, 53);
@@ -116,16 +116,16 @@
             this.uxStreamersButton.UseVisualStyleBackColor = true;
             this.uxStreamersButton.Click += new System.EventHandler(this.uxStreamersButton_Click);
             // 
-            // uxRetailSalesButton
+            // uxDeleteGameButton
             // 
-            this.uxRetailSalesButton.Location = new System.Drawing.Point(396, 31);
-            this.uxRetailSalesButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.uxRetailSalesButton.Name = "uxRetailSalesButton";
-            this.uxRetailSalesButton.Size = new System.Drawing.Size(124, 53);
-            this.uxRetailSalesButton.TabIndex = 3;
-            this.uxRetailSalesButton.Text = "Retail Sales";
-            this.uxRetailSalesButton.UseVisualStyleBackColor = true;
-            this.uxRetailSalesButton.Click += new System.EventHandler(this.uxRetailSalesButton_Click);
+            this.uxDeleteGameButton.Location = new System.Drawing.Point(216, 31);
+            this.uxDeleteGameButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uxDeleteGameButton.Name = "uxDeleteGameButton";
+            this.uxDeleteGameButton.Size = new System.Drawing.Size(124, 53);
+            this.uxDeleteGameButton.TabIndex = 3;
+            this.uxDeleteGameButton.Text = "Delete Game";
+            this.uxDeleteGameButton.UseVisualStyleBackColor = true;
+            this.uxDeleteGameButton.Click += new System.EventHandler(this.uxDeleteGameButton_Click);
             // 
             // uxReportQueriesButton
             // 
@@ -146,7 +146,7 @@
             this.Controls.Add(this.uxGameSalesButton);
             this.Controls.Add(this.uxPlatformSalesButton);
             this.Controls.Add(this.uxReportQueriesButton);
-            this.Controls.Add(this.uxRetailSalesButton);
+            this.Controls.Add(this.uxDeleteGameButton);
             this.Controls.Add(this.uxStreamersButton);
             this.Controls.Add(this.uxUpdateGameButton);
             this.Controls.Add(this.uxCompanyLookupButton);
@@ -168,7 +168,7 @@
         private System.Windows.Forms.Button uxPlatformSalesButton;
         private System.Windows.Forms.Button uxGameSalesButton;
         private System.Windows.Forms.Button uxStreamersButton;
-        private System.Windows.Forms.Button uxRetailSalesButton;
+        private System.Windows.Forms.Button uxDeleteGameButton;
         private System.Windows.Forms.Button uxReportQueriesButton;
     }
 }

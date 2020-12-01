@@ -68,16 +68,16 @@ namespace GamingDatabase
             streamers.Show();
         }
 
-        private void uxRetailSalesButton_Click(object sender, EventArgs e)
-        {
-            RetailSales retailSales = new RetailSales();
-            retailSales.Show();
-        }
-
         private void uxReportQueriesButton_Click(object sender, EventArgs e)
         {
-            //ReportQueries reportQueries = new ReportQueries(username, password);
-            //reportQueries.Show();
+            ReportQueries reportQueries = new ReportQueries(username, password);
+            reportQueries.Show();
+        }
+
+        private void uxDeleteGameButton_Click(object sender, EventArgs e)
+        {
+            DeleteGame deleteGame = new DeleteGame(username, password);
+            deleteGame.Show();
         }
     }
 }

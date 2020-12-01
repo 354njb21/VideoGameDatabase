@@ -30,16 +30,23 @@ namespace GamingDatabase
 
         private void uxFindCompanyBtn_Click(object sender, EventArgs e)
         {
-            string name = uxCompanyName.Text;
-            connection.Open();
-            if (name.Equals(""))
+            try
             {
-                MessageBox.Show("Please enter in a Company Name");
+                string name = uxCompanyName.Text;
+                connection.Open();
+                if (name.Equals(""))
+                {
+                    MessageBox.Show("Please enter in a Company Name");
+                    connection.Close();
+                    return;
+                }
                 connection.Close();
-                return;
+                ShowData(name);
             }
-            connection.Close();
-            ShowData(name);
+            catch (Exception)
+            {
+                MessageBox.Show("Error with information, please try again.");
+            }
         }
 
         public void ShowData(string name)

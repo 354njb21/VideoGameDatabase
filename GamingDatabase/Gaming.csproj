@@ -53,6 +53,12 @@
     <Compile Include="AddGame.Designer.cs">
       <DependentUpon>AddGame.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeleteGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteGame.Designer.cs">
+      <DependentUpon>DeleteGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameLookup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     <EmbeddedResource Include="CompanyLookup.resx">
       <DependentUpon>CompanyLookup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeleteGame.resx">
+      <DependentUpon>DeleteGame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GameLookup.resx">
       <DependentUpon>GameLookup.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +148,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportQueries.resx">
+      <DependentUpon>ReportQueries.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateGame.resx">
       <DependentUpon>UpdateGame.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,10 +181,6 @@
     <ProjectReference Include="..\Players\Players.csproj">
       <Project>{a1e248f0-6ee2-4162-9887-0a861603619c}</Project>
       <Name>Players</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sales\Sales.csproj">
-      <Project>{ecb8c81b-a8f7-42b7-afe4-3b791058a6bc}</Project>
-      <Name>Sales</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

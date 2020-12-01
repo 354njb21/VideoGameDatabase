@@ -28,18 +28,25 @@ namespace GamingDatabase
 
         private void uxFilterBtn_Click(object sender, EventArgs e)
         {
-            string platform = uxPlatformName.Text;
-            if (platform.Equals(""))
+            try
             {
-                MessageBox.Show("Please enter a valid Platform Name");
-                return;
+                string platform = uxPlatformName.Text;
+                if (platform.Equals(""))
+                {
+                    MessageBox.Show("Please enter a valid Platform Name");
+                    return;
+                }
+                connection.Open();
+                adapter = new SqlDataAdapter("SELECT Game.GameID, Game.[Name], OverallSale AS 'Sales (in Millions)', [Platform].[Name] AS 'Platform Name' FROM Gaming.GameSale INNER JOIN Gaming.Game ON Game.GameID = GameSale.GameID INNER JOIN Gaming.GamePlatform ON GamePlatform.GameID = Game.GameID INNER JOIN Gaming.[Platform] ON[Platform].PlatformID = GamePlatform.PlatformID WHERE[Platform].[Name] = '" + platform + "'", connection);
+                dt = new DataTable();
+                adapter.Fill(dt);
+                uxGameSalesDataGridView.DataSource = dt;
+                connection.Close();
+            } catch (Exception)
+            {
+                MessageBox.Show("Invalid information, please try again.");
+                connection.Close();
             }
-            connection.Open();
-            adapter = new SqlDataAdapter("SELECT Game.GameID, Game.[Name], OverallSale AS 'Sales (in Millions)', [Platform].[Name] AS 'Platform Name' FROM Gaming.GameSale INNER JOIN Gaming.Game ON Game.GameID = GameSale.GameID INNER JOIN Gaming.GamePlatform ON GamePlatform.GameID = Game.GameID INNER JOIN Gaming.[Platform] ON[Platform].PlatformID = GamePlatform.PlatformID WHERE[Platform].[Name] = '" + platform + "'", connection);
-            dt = new DataTable();
-            adapter.Fill(dt);
-            uxGameSalesDataGridView.DataSource = dt;
-            connection.Close();
         }
     }
 }

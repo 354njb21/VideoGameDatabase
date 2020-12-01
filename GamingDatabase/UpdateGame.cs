@@ -31,60 +31,75 @@ namespace GamingDatabase
 
         private void uxUpdateGameButton_Click(object sender, EventArgs e)
         {
-            string gameID = uxGameID.Text;
-            string companyID = uxCompanyID.Text;
-            string name = uxGameName.Text;
-            string genre = uxGameGenre.Text;
-            string rating = uxGameRating.Text;
-            string yearReleased = uxYearReleased.Text;
-            string price = uxPrice.Text;
-            string reviewScore = uxGameReviewScore.Text;
+            try
+            {
+                string gameID = uxGameID.Text;
+                string companyID = uxCompanyID.Text;
+                string name = uxGameName.Text;
+                string genre = uxGameGenre.Text;
+                string rating = uxGameRating.Text;
+                string yearReleased = uxYearReleased.Text;
+                string price = uxPrice.Text;
+                string reviewScore = uxGameReviewScore.Text;
 
-            if (gameID.Equals(""))
-            {
-                MessageBox.Show("Please enter in a GameID");
-                return;
+                if (gameID.Equals(""))
+                {
+                    MessageBox.Show("Please enter in a GameID");
+                    return;
+                }
+                if (companyID.Equals(""))
+                {
+                    MessageBox.Show("Please enter in a CompanyID");
+                    return;
+                }
+                if (name.Equals(""))
+                {
+                    MessageBox.Show("Please enter in a Name");
+                    return;
+                }
+                if (genre.Equals(""))
+                {
+                    MessageBox.Show("Please enter in a Genre");
+                    return;
+                }
+                if (rating.Equals(""))
+                {
+                    MessageBox.Show("Please enter in a Rating");
+                    return;
+                }
+                if (yearReleased.Equals(""))
+                {
+                    MessageBox.Show("Please enter in a Year Released");
+                    return;
+                }
+                if (price.Equals(""))
+                {
+                    MessageBox.Show("Please enter in a Price");
+                    return;
+                }
+                if (reviewScore.Equals(""))
+                {
+                    MessageBox.Show("Please enter in a Review Score");
+                    return;
+                }
+                SqlCommand command = new SqlCommand("Update Gaming.Game Set CompanyID= '" + companyID + "', Name= '" + name + "', Genre= '" + genre + "', Rating= '" + rating + "', YearReleased= '" + yearReleased + "', Price = '" + price + "', ReviewScore = '" + reviewScore + "' Where GameID = " + gameID, connection);
+                connection.Open();
+                command.ExecuteNonQuery();
+                MessageBox.Show("Game Successfully Updated");
+                connection.Close();
             }
-            if (companyID.Equals(""))
+            catch (Exception)
             {
-                MessageBox.Show("Please enter in a CompanyID");
-                return;
+                MessageBox.Show("Invalid information was entered, please try again.");
+                uxCompanyID.Clear();
+                uxGameID.Clear();
+                uxGameName.Clear();
+                uxGameReviewScore.Clear();
+                uxPrice.Clear();
+                uxYearReleased.Clear();
+                connection.Close();
             }
-            if (name.Equals(""))
-            {
-                MessageBox.Show("Please enter in a Name");
-                return;
-            }
-            if (genre.Equals(""))
-            {
-                MessageBox.Show("Please enter in a Genre");
-                return;
-            }
-            if (rating.Equals(""))
-            {
-                MessageBox.Show("Please enter in a Rating");
-                return;
-            }
-            if (yearReleased.Equals(""))
-            {
-                MessageBox.Show("Please enter in a Year Released");
-                return;
-            }
-            if (price.Equals(""))
-            {
-                MessageBox.Show("Please enter in a Price");
-                return;
-            }
-            if (reviewScore.Equals(""))
-            {
-                MessageBox.Show("Please enter in a Review Score");
-                return;
-            }
-            SqlCommand command = new SqlCommand("Update Gaming.Game Set CompanyID= '" + companyID + "', Name= '" + name + "', Genre= '" + genre + "', Rating= '" + rating + "', YearReleased= '" + yearReleased + "', Price = '" + price + "', ReviewScore = '" + reviewScore + "' Where GameID = " + gameID, connection);
-            connection.Open();
-            command.ExecuteNonQuery();
-            MessageBox.Show("Game Successfully Updated");
-            connection.Close();
+            
         }
     }
 }

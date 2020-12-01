@@ -26,54 +26,66 @@ namespace GamingDatabase
 
         private void uxAddButton_Click(object sender, EventArgs e)
         {
-            string companyID = uxCompanyID.Text;
-            string name = uxName.Text;
-            string genre = uxGenre.Text;
-            string rating = uxRating.Text;
-            string yearReleased = uxYearReleased.Text;
-            string price = uxPrice.Text;
-            string reviewScore = uxReviewScore.Text;
+            try
+            {
+                string companyID = uxCompanyID.Text;
+                string name = uxName.Text;
+                string genre = uxGenre.Text;
+                string rating = uxRating.Text;
+                string yearReleased = uxYearReleased.Text;
+                string price = uxPrice.Text;
+                string reviewScore = uxReviewScore.Text;
 
-            if (companyID.Equals(""))
+                if (companyID.Equals(""))
+                {
+                    MessageBox.Show("Please enter a companyID");
+                    return;
+                }
+                if (name.Equals(""))
+                {
+                    MessageBox.Show("Please enter a Name");
+                    return;
+                }
+                if (genre.Equals(""))
+                {
+                    MessageBox.Show("Please enter a Genre");
+                    return;
+                }
+                if (rating.Equals(""))
+                {
+                    MessageBox.Show("Please enter a Rating");
+                    return;
+                }
+                if (yearReleased.Equals(""))
+                {
+                    MessageBox.Show("Please enter a Release Years");
+                    return;
+                }
+                if (price.Equals(""))
+                {
+                    MessageBox.Show("Please enter a Price");
+                    return;
+                }
+                if (reviewScore.Equals(""))
+                {
+                    MessageBox.Show("Please enter a Review Score");
+                    return;
+                }
+                SqlCommand com = new SqlCommand("Insert into Gaming.Game (CompanyID, Name, Genre, Rating, YearReleased, Price, ReviewScore) Values('" + companyID + "','" + name + "','" + genre + "','" + rating + "','" + yearReleased + "', '" + price + "', '" + reviewScore + "')", connection);
+                connection.Open();
+                com.ExecuteNonQuery();
+                MessageBox.Show("Added Successfully");
+                connection.Close();
+                Close();
+            }catch (Exception)
             {
-                MessageBox.Show("Please enter a companyID");
-                return;
+                MessageBox.Show("Error with information received, please enter valid information only");
+                uxCompanyID.Clear();
+                uxName.Clear();
+                uxYearReleased.Clear(); 
+                uxPrice.Clear();
+                uxReviewScore.Clear();
             }
-            if (name.Equals(""))
-            {
-                MessageBox.Show("Please enter a Name");
-                return;
-            }
-            if (genre.Equals(""))
-            {
-                MessageBox.Show("Please enter a Genre");
-                return;
-            }
-            if (rating.Equals(""))
-            {
-                MessageBox.Show("Please enter a Rating");
-                return;
-            }
-            if (yearReleased.Equals(""))
-            {
-                MessageBox.Show("Please enter a Release Years");
-                return;
-            }
-            if (price.Equals(""))
-            {
-                MessageBox.Show("Please enter a Price");
-                return;
-            }
-            if (reviewScore.Equals(""))
-            {
-                MessageBox.Show("Please enter a Review Score");
-                return;
-            }
-            SqlCommand com = new SqlCommand("Insert into Gaming.Game (CompanyID, Name, Genre, Rating, YearReleased, Price, ReviewScore) Values('" + companyID + "','" + name + "','" + genre + "','" + rating + "','" + yearReleased + "', '" + price + "', '" + reviewScore + "')", connection);
-            connection.Open();
-            com.ExecuteNonQuery();
-            MessageBox.Show("Added Successfully");
-            connection.Close();
         }
     }
 }

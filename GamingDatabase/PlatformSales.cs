@@ -29,31 +29,42 @@ namespace GamingDatabase
 
         private void uxFilterPlatformSales_Click(object sender, EventArgs e)
         {
-            string minYear = uxStartYear.Text;
-            string maxYear = uxEndYear.Text;
-            string platform = uxPlatform.Text;
+            try
+            {
+                string minYear = uxStartYear.Text;
+                string maxYear = uxEndYear.Text;
+                string platform = uxPlatform.Text;
 
-            if (minYear.Equals(""))
-            {
-                MessageBox.Show("Enter a valid Start Year");
-                return;
+                if (minYear.Equals(""))
+                {
+                    MessageBox.Show("Enter a valid Start Year");
+                    return;
+                }
+                if (maxYear.Equals(""))
+                {
+                    MessageBox.Show("Enter a valid End Year");
+                    return;
+                }
+                if (platform.Equals(""))
+                {
+                    MessageBox.Show("Enter a valid Platform");
+                    return;
+                }
+                connection.Open();
+                adapter = new SqlDataAdapter("SELECT P.PlatformID, P.[Name], S.[Year], S.Sales AS 'Sales in Millions' FROM Gaming.[Platform] P INNER JOIN[Platform].Sales S ON S.PlatformID = P.PlatformID WHERE S.[Year] BETWEEN " + minYear + "and " + maxYear + "and S.PlatformID= " + platform, connection);
+                dt = new DataTable();
+                adapter.Fill(dt);
+                uxDataGridView.DataSource = dt;
+                connection.Close();
             }
-            if (maxYear.Equals(""))
+            catch (Exception)
             {
-                MessageBox.Show("Enter a valid End Year");
-                return;
+                MessageBox.Show("Invalid information was entered, please try again.");
+                uxEndYear.Clear();
+                uxPlatform.Clear();
+                uxStartYear.Clear();
+                connection.Close();
             }
-            if (platform.Equals(""))
-            {
-                MessageBox.Show("Enter a valid Platform");
-                return;
-            }
-            connection.Open();
-            adapter = new SqlDataAdapter("SELECT P.PlatformID, P.[Name], S.[Year], S.Sales AS 'Sales in Millions' FROM Gaming.[Platform] P INNER JOIN[Platform].Sales S ON S.PlatformID = P.PlatformID WHERE S.[Year] BETWEEN " + minYear + "and " + maxYear + "and S.PlatformID= " + platform, connection);
-            dt = new DataTable();
-            adapter.Fill(dt);
-            uxDataGridView.DataSource = dt;
-            connection.Close();
         }
     }
 }

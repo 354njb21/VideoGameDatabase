@@ -170,12 +170,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="SQL\Tables\DropGamingTables.sql" />
-    <Content Include="SQL\Tables\Gaming.Company.sql" />
-    <Content Include="SQL\Tables\Gaming.Game.sql" />
-    <Content Include="SQL\Tables\Gaming.Platforms.sql" />
+    <Content Include="SQL\Tables.sql" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Players\Players.csproj">

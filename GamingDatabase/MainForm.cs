@@ -64,7 +64,7 @@ namespace GamingDatabase
 
         private void uxStreamersButton_Click(object sender, EventArgs e)
         {
-            Streamers streamers = new Streamers();
+            Streamers streamers = new Streamers(username, password);
             streamers.Show();
         }
 

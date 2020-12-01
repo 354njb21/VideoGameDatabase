@@ -58,5 +58,15 @@ namespace GamingDatabase
             uxDataGridView.DataSource = dt;
             connection.Close();
         }
+
+        private void uxReportQuery4Button_Click(object sender, EventArgs e)
+        {
+            adapter = new SqlDataAdapter("SELECT S.[Year], P.[Name], SUM(GS.OverallSale) AS 'Sales in Millions', RANK() OVER(PARTITION BY S.[Year] ORDER BY Sales) YearRank FROM[Platform].Sales S INNER JOIN Gaming.[Platform] P ON P.PlatformID = S.PlatformID INNER JOIN Gaming.GamePlatform GP ON GP.PlatformID = P.PlatformID INNER JOIN Gaming.Game G ON G.GameID = GP.GameID INNER JOIN Gaming.GameSale GS ON GS.GameID = G.GameID GROUP BY S.[Year], P.[Name], Sales", connection);
+            connection.Open();
+            dt = new DataTable();
+            adapter.Fill(dt);
+            uxDataGridView.DataSource = dt;
+            connection.Close();
+        }
     }
 }

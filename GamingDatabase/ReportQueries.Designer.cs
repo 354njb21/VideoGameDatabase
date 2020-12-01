@@ -48,6 +48,7 @@
             this.uxMinRating = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.uxDataGridView = new System.Windows.Forms.DataGridView();
+            this.uxReportQuery4Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.uxDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,9 +75,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(15, 335);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 17);
+            this.label3.Size = new System.Drawing.Size(295, 17);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Report Query 1";
+            this.label3.Text = "Platform Rank by Year Based on Game Sales\r\n";
             // 
             // label4
             // 
@@ -223,11 +224,22 @@
             this.uxDataGridView.Size = new System.Drawing.Size(982, 194);
             this.uxDataGridView.TabIndex = 21;
             // 
+            // uxReportQuery4Button
+            // 
+            this.uxReportQuery4Button.Location = new System.Drawing.Point(601, 317);
+            this.uxReportQuery4Button.Name = "uxReportQuery4Button";
+            this.uxReportQuery4Button.Size = new System.Drawing.Size(99, 52);
+            this.uxReportQuery4Button.TabIndex = 22;
+            this.uxReportQuery4Button.Text = "Calculate Query 4\r\n";
+            this.uxReportQuery4Button.UseVisualStyleBackColor = true;
+            this.uxReportQuery4Button.Click += new System.EventHandler(this.uxReportQuery4Button_Click);
+            // 
             // ReportQueries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 633);
+            this.Controls.Add(this.uxReportQuery4Button);
             this.Controls.Add(this.uxDataGridView);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.uxMinRating);
@@ -278,5 +290,6 @@
         private System.Windows.Forms.TextBox uxMinRating;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView uxDataGridView;
+        private System.Windows.Forms.Button uxReportQuery4Button;
     }
 }

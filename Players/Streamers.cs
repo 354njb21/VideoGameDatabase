@@ -13,14 +13,18 @@ namespace Players
 {
     public partial class Streamers : Form
     {
-        private SqlConnection connection = new SqlConnection("Data Source = (localdb)\\MSSQLLocalDb;Initial Catalog=VideoGames;Integrated Security=True");
+        SqlConnection connection;
         private SqlDataAdapter adapter;
         private DataTable dt;
+        private string user;
+        private string pass;
 
-        public Streamers()
+        public Streamers(string u, string p)
         {
             InitializeComponent();
-
+            user = u;
+            pass = p;
+            connection = new SqlConnection("Data Source=mssql.cs.ksu.edu;Initial Catalog = connorg15; User ID = " + user + "; Password=" + pass);
             connection.Open();
             adapter = new SqlDataAdapter("Select * From Players.Streamers", connection);
             dt = new DataTable();
@@ -35,7 +39,10 @@ namespace Players
             string min = uxMinSubscribers.Text;
 
             connection.Open();
-            if (max.Equals("") && min.Equals("")) MessageBox.Show("Enter a min and or max value");
+            if (max.Equals("") && min.Equals("")) {
+                MessageBox.Show("Enter a min and or max value");
+                connection.Close();
+            } 
 
             else if (max.Equals("") && min.Length > 0)
             {

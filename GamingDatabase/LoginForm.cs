@@ -43,7 +43,7 @@ namespace GamingDatabase
                 {
                     user = uxUsername.Text;
                     pass = uxPassword.Text;
-                    SqlConnection con = new SqlConnection("Data Source = (localdb)\\MSSQLLocalDb;Initial Catalog=VideoGames;Integrated Security=True");
+                    SqlConnection con = new SqlConnection("Data Source=mssql.cs.ksu.edu;Initial Catalog = connorg15; User ID = " + user + "; Password=" + pass);
                     con.Open();
                     con.Close();
                     return true;

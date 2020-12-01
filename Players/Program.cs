@@ -16,7 +16,7 @@ namespace Players
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Streamers());
+            //Application.Run(new Streamers());
         }
     }
 }
